@@ -4,7 +4,7 @@
 	"Properties": {
 		"id": "20220913223533-jqys64s",
 		"title": "多线程",
-		"updated": "20221011111217"
+		"updated": "20221011221539"
 	},
 	"Children": [
 		{
@@ -11267,6 +11267,1682 @@
 				{
 					"Type": "NodeBr",
 					"Data": "br"
+				}
+			]
+		},
+		{
+			"ID": "20221011214518-6y4i6dm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221011214518-6y4i6dm"
+			}
+		},
+		{
+			"ID": "20221011214520-ni3ljve",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221011214520-ni3ljve",
+				"updated": "20221011214520"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "STL,智能指针和线程安全"
+				}
+			]
+		},
+		{
+			"ID": "20221011214520-9chgnr0",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221011214520-9chgnr0",
+				"updated": "20221011214520"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "STL中的容器是否是线程安全的?"
+				}
+			]
+		},
+		{
+			"ID": "20221011214520-tbclyr9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221011214520-tbclyr9",
+				"updated": "20221011214520"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "不是."
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n原因是, "
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "STL 的设计初衷是将性能挖掘到极致"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ", 而一旦涉及到加锁保证线程安全, 会对性能造成巨大的影响.\n而且对于不同的容器, 加锁方式的不同, 性能可能也不同(例如hash表的锁表和锁桶).\n因此 STL 默认不是线程安全. 如果需要在多线程环境下使用, 往往需要调用者自行保证线程安全."
+				}
+			]
+		},
+		{
+			"ID": "20221011214525-qyyjkah",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221011214525-qyyjkah"
+			}
+		},
+		{
+			"ID": "20221011214520-xwhde3u",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221011214520-xwhde3u",
+				"updated": "20221011214520"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "智能指针是否是线程安全的?"
+				}
+			]
+		},
+		{
+			"ID": "20221011214520-h1ndnpl",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221011214520-h1ndnpl",
+				"updated": "20221011214520"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "对于 unique_ptr, 由于只是在当前代码块范围内生效, 因此不涉及线程安全问题.\n对于 shared_ptr, 多个对象需要共用一个引用计数变量, 所以会存在线程安全问题. 但是标准库实现的时候考虑到了这个问题, 基于原子操作(CAS)的方式保证 shared_ptr 能够高效, 原子的操作引用计数."
+				}
+			]
+		},
+		{
+			"ID": "20221011214528-h7vnsuy",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221011214528-h7vnsuy"
+			}
+		},
+		{
+			"ID": "20221011214520-t9wk35h",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221011214520-t9wk35h",
+				"updated": "20221011214520"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "其他常见的各种锁"
+				}
+			]
+		},
+		{
+			"ID": "20221011214520-xbhpjux",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221011214520-xbhpjux",
+				"updated": "20221011214520"
+			},
+			"Children": [
+				{
+					"ID": "20221011214519-p5n217m",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221011214519-p5n217m",
+						"updated": "20221011214519"
+					},
+					"Children": [
+						{
+							"ID": "20221011214520-bnhovir",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221011214520-bnhovir",
+								"updated": "20221011214520"
+							},
+							"Children": [
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "悲观锁"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：在每次取数据时，总是担心数据会被其他线程修改，所以会在取数据前先加锁（读锁，写锁，行锁等），当其他线程想要访问数据时，被阻塞挂起。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221011214519-7g4wdaz",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221011214519-7g4wdaz",
+						"updated": "20221011214519"
+					},
+					"Children": [
+						{
+							"ID": "20221011214520-ngztffa",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221011214520-ngztffa",
+								"updated": "20221011214520"
+							},
+							"Children": [
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "乐观锁"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：每次取数据时候，总是乐观的认为数据不会被其他线程修改，因此不上锁。但是在更新数据前，会判断其他数据在更新前有没有对数据进行修改。主要采用两种方式：版本号机制和CAS操作。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221011214519-hgokhtg",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221011214519-hgokhtg",
+						"updated": "20221011214519"
+					},
+					"Children": [
+						{
+							"ID": "20221011214520-z7v17ur",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221011214520-z7v17ur",
+								"updated": "20221011214520"
+							},
+							"Children": [
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "CAS操作"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "：当需要更新数据时，判断当前内存值和之前取得的值是否相等。如果相等则用新值更新。若不 等则失败，失败则重试，一般是一个自旋的过程，即不断重试。"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221011214519-e1e6dcf",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221011214519-e1e6dcf",
+						"updated": "20221011214519"
+					},
+					"Children": [
+						{
+							"ID": "20221011214520-7xdmaph",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221011214520-7xdmaph",
+								"updated": "20221011214520"
+							},
+							"Children": [
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "自旋锁，公平锁，非公平锁"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "？"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221011214520-dyf4h4v",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221011214520-dyf4h4v",
+				"updated": "20221011214520"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "读者写者问题"
+				}
+			]
+		},
+		{
+			"ID": "20221011214520-o9od5cp",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221011214520-o9od5cp",
+				"updated": "20221011214520"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "在编写多线程的时候，有一种情况是十分常见的。那就是，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "有些公共数据修改的机会比较少。相比较改写，它们读的机会反而高的多。通常而言，在读的过程中，往往伴随着查找的操作，中间耗时很长。给这种代码段加锁，会极大地降低我们程序的效率。"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 那么有没有一种方法，可以专门处理这种多读少写的情况呢？     "
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "有，那就是读写锁。"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221011214520-q9y3gku",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221011214520-q9y3gku",
+				"updated": "20221011221200"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "其实也还是"
+				},
+				{
+					"Type": "NodeBlockRef",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeBlockRefID",
+							"Data": "20221011090456-yn4sbvw"
+						},
+						{
+							"Type": "NodeBlockRefSpace"
+						},
+						{
+							"Type": "NodeBlockRefDynamicText",
+							"Data": "\"321\"原则"
+						},
+						{
+							"Type": "NodeCloseParen"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n​"
+				},
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221011203430"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221011203430-20221011221155-o4fuw1i.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeBr",
+					"Data": "br"
+				}
+			]
+		},
+		{
+			"ID": "20221011221206-dbmxfsr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221011221206-dbmxfsr"
+			}
+		},
+		{
+			"ID": "20221011214520-ai9qw0r",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221011214520-ai9qw0r",
+				"updated": "20221011214520"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "生产和消费vs读者写者"
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221011214520-qc9yfi4",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221011214520-qc9yfi4",
+				"updated": "20221011214520"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221011214520-f6fonn4",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221011214520-f6fonn4",
+						"updated": "20221011214520"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "根本原因:读者不会取走资源,而消费者会拿走数据!"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221011214520-o9oh1fl",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221011214520-o9oh1fl",
+				"updated": "20221011214520"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "一个人在写，多个人在读"
+				}
+			]
+		},
+		{
+			"ID": "20221011214520-ii04jwv",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221011214520-ii04jwv",
+				"updated": "20221011214520"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221011214520-gt0sv4x",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221011214520-gt0sv4x",
+						"updated": "20221011214520"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "写者和写者: 互斥关系\n读者和写者: 互斥，同步\n读者和读者: 没有关系"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221011221214-ks91rf0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221011221214-ks91rf0"
+			}
+		},
+		{
+			"ID": "20221011214520-y1lf7d4",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221011214520-y1lf7d4",
+				"updated": "20221011214520"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "读写锁"
+				}
+			]
+		},
+		{
+			"ID": "20221011214520-c97ikoo",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221011214520-c97ikoo",
+				"updated": "20221011221230"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221011203742"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221011203742-20221011221230-gbzrz7u.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221011214520-mcrjact",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221011214520-mcrjact",
+				"updated": "20221011214520"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "读写锁接口"
+				}
+			]
+		},
+		{
+			"ID": "20221011214520-ujxgd9k",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221011214520-ujxgd9k",
+				"updated": "20221011214520"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "设置读写优先"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221011214520-rniqhoi",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221011214520-rniqhoi",
+				"updated": "20221011214520"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "int pthread_rwlockattr_setkind_np(pthread_rwlockattr_t *attr, int pref); \n/*\npref 共有    3 种选择\nPTHREAD_RWLOCK_PREFER_READER_NP (默认设置) 读者优先，可能会导致写者饥饿情况\n\nPTHREAD_RWLOCK_PREFER_WRITER_NP 写者优先，目前有    BUG，导致表现行为和\nPTHREAD_RWLOCK_PREFER_READER_NP 一致\n\nPTHREAD_RWLOCK_PREFER_WRITER_NONRECURSIVE_NP 写者优先，但写者不能递归加锁\n*/\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221011214520-o2rrwfm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221011214520-o2rrwfm",
+				"updated": "20221011214520"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "初始化"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221011214520-v3o9rlo",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221011214520-v3o9rlo",
+				"updated": "20221011214520"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "int pthread_rwlock_init(pthread_rwlock_t *restrict rwlock , const pthread_rwlockattr_t *restrict attr);\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221011214520-mxrzj3y",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221011214520-mxrzj3y",
+				"updated": "20221011214520"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "销毁"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221011214520-whtw2ct",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221011214520-whtw2ct",
+				"updated": "20221011214520"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "int pthread_rwlock_destroy(pthread_rwlock_t *rwlock);\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221011214520-ycybrfa",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221011214520-ycybrfa",
+				"updated": "20221011214520"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "加锁与解锁"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221011214520-uj5s8k0",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221011214520-uj5s8k0",
+				"updated": "20221011214520"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "int pthread_rwlock_rdlock(pthread_rwlock_t *rwlock);//读锁\n\nint pthread_rwlock_wrlock(pthread_rwlock_t *rwlock);//写锁\n\nint pthread_rwlock_unlock(pthread_rwlock_t *rwlock);\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221011221248-94raovx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221011221248-94raovx"
+			}
+		},
+		{
+			"ID": "20221011214520-as57z07",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221011214520-as57z07",
+				"updated": "20221011214520"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "读写锁伪代码理解"
+				}
+			]
+		},
+		{
+			"ID": "20221011214520-2uo1giz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221011214520-2uo1giz",
+				"updated": "20221011221246"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221011210534"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221011210534-20221011221246-19ul740.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "写者"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221011214520-s7n4r2b",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221011214520-s7n4r2b",
+				"updated": "20221011214520"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mtx1.lock()\nwhile(readers \u003e 0)//只要还有读者在读，写者就一直等待，直到读者为0\n{\n\twait();\n}\n\n//读者为0，进入临界区，对内容进行修改\n\nmtx1.unlock（）\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221011214520-gf1b7qu",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221011214520-gf1b7qu",
+				"updated": "20221011214520"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "读者"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221011214520-0czhz91",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221011214520-0czhz91",
+				"updated": "20221011214520"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "mtx1.lock();\nreaders++;\nmtx1.unlock();\n\n\nmtx1.lock();\nreaders--;//读者减少，\nmtx1.unlock();\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221011214520-5020979",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221011214520-5020979",
+				"updated": "20221011214520"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "读者写者的优先级问题"
+				}
+			]
+		},
+		{
+			"ID": "20221011214520-u5l1ivd",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221011214520-u5l1ivd",
+				"updated": "20221011221258"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221011210642"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221011210642-20221011221258-1roqjob.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221011214520-j34lodj",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221011214520-j34lodj",
+				"updated": "20221011214520"
+			},
+			"Children": [
+				{
+					"ID": "20221011214520-opi7i0i",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221011214520-opi7i0i",
+						"updated": "20221011214520"
+					},
+					"Children": [
+						{
+							"ID": "20221011214520-1fq1tcn",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221011214520-1fq1tcn",
+								"updated": "20221011214520"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "读者优先:读者和写者同时到来的时候，我们让读者先进入访问"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221011214520-of1z1ee",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221011214520-of1z1ee",
+						"updated": "20221011214520"
+					},
+					"Children": [
+						{
+							"ID": "20221011214520-zeq0uh3",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221011214520-zeq0uh3",
+								"updated": "20221011214520"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "写者优先:当读者和写者同时到来的时候，比当前写者晚来的所有的读者，都不要进入临界区访问了，等临界区中没有读者的时候，让写者先"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221011214520-bbo9zx1",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221011214520-bbo9zx1",
+				"updated": "20221011214520"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "读写锁案列"
+				}
+			]
+		},
+		{
+			"ID": "20221011221307-95p129s",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221011221307-95p129s",
+				"updated": "20221011221323"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockRef",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeBlockRefID",
+							"Data": "20221011221323-nbbqp8m"
+						},
+						{
+							"Type": "NodeBlockRefSpace"
+						},
+						{
+							"Type": "NodeBlockRefDynamicText",
+							"Data": "读写锁代码"
+						},
+						{
+							"Type": "NodeCloseParen"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221011214520-7liyqu1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221011214520-7liyqu1",
+				"updated": "20221011221427"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221011212001"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221011212001-20221011221422-ob14y6i.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221011221456-kty28oo",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221011221456-kty28oo"
+			}
+		},
+		{
+			"ID": "20221011214520-rcjrmh7",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221011214520-rcjrmh7",
+				"updated": "20221011214520"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "挂起等待特性的锁 vs 自旋锁"
+				}
+			]
+		},
+		{
+			"ID": "20221011214520-5qz7esc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221011214520-5qz7esc",
+				"updated": "20221011214520"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "自旋锁与互斥锁有点类似，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "只是自旋锁不会引起调用者睡眠，如果自旋锁已经被别的执行单元保持，调用者就一直循环在那里看是否该自旋锁的保持者已经释放了锁"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，\"自旋\"一词就是因此而得名。"
+				}
+			]
+		},
+		{
+			"ID": "20221011214520-yi70tzm",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221011214520-yi70tzm",
+				"updated": "20221011214520"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "由于自旋锁使用者一般保持锁时间非常短，因此选择自旋而不是睡眠是非常必要的，自旋锁的效率远高于互斥锁。"
+				}
+			]
+		},
+		{
+			"ID": "20221011214520-cpwv0ni",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221011214520-cpwv0ni",
+				"updated": "20221011214520"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用自旋锁的场景"
+				}
+			]
+		},
+		{
+			"ID": "20221011214520-y9fpr11",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221011214520-y9fpr11",
+				"updated": "20221011214520"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "其实就像等人，如果需要等人的时间长，我们可以去其他地方做其他事情，但是如果需要等的时间非常短，我们就会在约定地点等人，不断的询问她快到没。    其实不断询问的这个过程其实就是自旋锁的过程。"
+				}
+			]
+		},
+		{
+			"ID": "20221011214520-39r5hag",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221011214520-39r5hag",
+				"updated": "20221011214520"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "而线程访问临界资源是需要花费时间的，线程如何得知，自己会在临界资源中待多长时间呢?﹖"
+				},
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "线程不知道!!，程序员知道!   因为临界区是程序员写的，程序员能判断是否需要使用自旋锁"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
+				}
+			]
+		},
+		{
+			"ID": "20221011214520-wt3vucl",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221011214520-wt3vucl",
+				"updated": "20221011214520"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "如果花费的时间非常短?"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221011214520-17b76yf",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221011214520-17b76yf",
+				"updated": "20221011214520"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221011214520-ty3qa9z",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221011214520-ty3qa9z",
+						"updated": "20221011214520"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "比较适合自旋锁,不断的通过循环，检测锁的状态"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221011214520-iqepkzt",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221011214520-iqepkzt",
+				"updated": "20221011214520"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "如果花费的时间非常长?"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221011214520-fmle5oy",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221011214520-fmle5oy",
+				"updated": "20221011214520"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221011214520-1t7kybf",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221011214520-1t7kybf",
+						"updated": "20221011214520"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "比较适合挂起等待锁"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221011214520-8n367t3",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221011214520-8n367t3",
+				"updated": "20221011221535"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "Pasted image 20221011212335"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/Pasted image 20221011212335-20221011221535-4mo301f.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221011221539-zffteyy",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221011221539-zffteyy"
+			}
+		},
+		{
+			"ID": "20221011214520-bzqfemo",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221011214520-bzqfemo",
+				"updated": "20221011214520"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "自旋锁函数"
+				}
+			]
+		},
+		{
+			"ID": "20221011214520-hqelar0",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221011214520-hqelar0",
+				"updated": "20221011214520"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "#include \u003cpthread.h\u003e\nint pthread_spin_destroy(pthread_spinlock_t *lock);//销毁自旋锁\n\nint pthread_spin_init(pthread_spinlock_t *lock, int pshared);//初始化自旋锁\n\nint pthread_spin_lock(pthread_spinlock_t *lock);//自旋锁\n\nint pthread_spin_unlock(pthread_spinlock_t *lock);\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
 				}
 			]
 		}
