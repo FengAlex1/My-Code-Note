@@ -4,7 +4,7 @@
 	"Properties": {
 		"id": "20220722100637-md5xqdk",
 		"title": "vector",
-		"updated": "20220829131935"
+		"updated": "20221012224056"
 	},
 	"Children": [
 		{
@@ -2426,6 +2426,62 @@
 			"Properties": {
 				"id": "20220722133507-0wnvu8x"
 			}
+		},
+		{
+			"ID": "20221012224056-dkn63hy",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221012224056-dkn63hy",
+				"updated": "20221012224056"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用initializer_list来构造vector"
+				}
+			]
+		},
+		{
+			"ID": "20221012224056-c1ly8nt",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221012224056-c1ly8nt",
+				"updated": "20221012224056"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用[[列表初始化#initializer_list|initializer_list]]来构造vector"
+				}
+			]
+		},
+		{
+			"ID": "20221012224056-zox9ixt",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221012224056-zox9ixt",
+				"updated": "20221012224056"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "vector(initializer_list\u003cT\u003e itl)\n\t:_start(nullptr)\n\t, _finish(nullptr)\n\t, _end_of_storage(nullptr)\n{\n\tvector\u003cT\u003e tmp;\n\tfor (auto e : itl)\n\t{\n\t\ttmp.push_back(e);\n\t}\n\tswap(tmp);\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
 		}
 	]
 }

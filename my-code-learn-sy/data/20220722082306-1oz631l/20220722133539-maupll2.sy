@@ -4,7 +4,7 @@
 	"Properties": {
 		"id": "20220722133539-maupll2",
 		"title": "list",
-		"updated": "20220722133844"
+		"updated": "20221012224258"
 	},
 	"Children": [
 		{
@@ -1711,6 +1711,105 @@
 					"Data": "```"
 				}
 			]
+		},
+		{
+			"ID": "20221012223931-nfooctc",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221012223931-nfooctc"
+			}
+		},
+		{
+			"ID": "20221012224002-wpw37s0",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221012224002-wpw37s0",
+				"updated": "20221012224258"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "使用initializer_list构造来构造list"
+				}
+			]
+		},
+		{
+			"ID": "20221012224002-ryxq5vr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221012224002-ryxq5vr",
+				"updated": "20221012224017"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockRef",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeBlockRefID",
+							"Data": "20221012223739-qdrsz4q"
+						},
+						{
+							"Type": "NodeBlockRefSpace"
+						},
+						{
+							"Type": "NodeBlockRefDynamicText",
+							"Data": "initializer_list"
+						},
+						{
+							"Type": "NodeCloseParen"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "来构造list。"
+				}
+			]
+		},
+		{
+			"ID": "20221012224002-ht6h04q",
+			"Type": "NodeCodeBlock",
+			"IsFencedCodeBlock": true,
+			"Properties": {
+				"id": "20221012224002-ht6h04q",
+				"updated": "20221012224002"
+			},
+			"Children": [
+				{
+					"Type": "NodeCodeBlockFenceOpenMarker",
+					"Data": "```"
+				},
+				{
+					"Type": "NodeCodeBlockFenceInfoMarker",
+					"CodeBlockInfo": "Y3Bw"
+				},
+				{
+					"Type": "NodeCodeBlockCode",
+					"Data": "list(std::initializer_list\u003cT\u003e ilt)\n{\n\t_head = new Node();\n\t_head-\u003e_next = _head;\n\t_head-\u003e_prev = _head;\n\n\tfor (auto e : ilt)\n\t{\n\t\tpush_back(e);\n\t}\n}\n"
+				},
+				{
+					"Type": "NodeCodeBlockFenceCloseMarker",
+					"Data": "```"
+				}
+			]
+		},
+		{
+			"ID": "20221012223932-oakga38",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221012223932-oakga38"
+			}
 		}
 	]
 }
