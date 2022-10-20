@@ -4,7 +4,7 @@
 	"Properties": {
 		"id": "20220722153052-t26rxxj",
 		"title": "Linux IO操作",
-		"updated": "20220905105345"
+		"updated": "20221020162914"
 	},
 	"Children": [
 		{
@@ -12233,21 +12233,37 @@
 			"Type": "NodeBlockquote",
 			"Properties": {
 				"id": "20220904134255-ynosv4h",
-				"updated": "20220904134255"
+				"updated": "20221020160904"
 			},
 			"Children": [
 				{
-					"Type": "NodeBlockquoteMarker",
-					"Data": "\u003e"
-				},
-				{
-					"ID": "20220904134255-khuz33m",
+					"ID": "20221020160836-2eybt4b",
 					"Type": "NodeParagraph",
 					"Properties": {
-						"id": "20220904134255-khuz33m",
-						"updated": "20220904134255"
+						"id": "20221020160836-2eybt4b",
+						"updated": "20221020160904"
 					},
 					"Children": [
+						{
+							"Type": "NodeCodeSpan",
+							"Data": "code",
+							"Children": [
+								{
+									"Type": "NodeCodeSpanOpenMarker"
+								},
+								{
+									"Type": "NodeCodeSpanContent",
+									"Data": "-I"
+								},
+								{
+									"Type": "NodeCodeSpanCloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 指明头文件搜索路径\n"
+						},
 						{
 							"Type": "NodeCodeSpan",
 							"Data": "code",
@@ -12286,29 +12302,13 @@
 						},
 						{
 							"Type": "NodeText",
-							"Data": " 指明要链接哪一个库\n"
-						},
-						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "-I"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
-						},
-						{
-							"Type": "NodeText",
-							"Data": " 指明头文件搜索路径"
+							"Data": " 指明要链接哪一个库"
 						}
 					]
+				},
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
 				}
 			]
 		},
@@ -12935,80 +12935,100 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20220904134255-5ik2uvf",
-				"updated": "20220904141217"
+				"updated": "20221020161712"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "此方法比较实用，基本没有配置风险。\n==进入 "
+					"Data": "此方法比较实用，基本没有配置风险。\n"
 				},
 				{
-					"Type": "NodeStrong",
-					"Data": "strong",
+					"Type": "NodeMark",
+					"Data": "mark",
 					"Children": [
 						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
+							"Type": "NodeMark2OpenMarker"
 						},
 						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
+							"Type": "NodeText",
+							"Data": "进入 "
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
 							"Children": [
 								{
-									"Type": "NodeCodeSpanOpenMarker"
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
 								},
 								{
-									"Type": "NodeCodeSpanContent",
-									"Data": "/etc/ld.so.conf.d"
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": "/etc/ld.so.conf.d"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
 								},
 								{
-									"Type": "NodeCodeSpanCloseMarker"
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
 								}
 							]
 						},
 						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
+							"Type": "NodeText",
+							"Data": " 路径，新建一个 "
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeCodeSpan",
+									"Data": "code",
+									"Children": [
+										{
+											"Type": "NodeCodeSpanOpenMarker"
+										},
+										{
+											"Type": "NodeCodeSpanContent",
+											"Data": ".conf"
+										},
+										{
+											"Type": "NodeCodeSpanCloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": " 后缀的文件，文件名任意，新建与写入需要管理员权限。\n在文件中写入我们 库的路径"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
 						}
 					]
 				},
 				{
 					"Type": "NodeText",
-					"Data": " 路径，新建一个 "
-				},
-				{
-					"Type": "NodeStrong",
-					"Data": "strong",
-					"Children": [
-						{
-							"Type": "NodeStrongA6kOpenMarker",
-							"Data": "**"
-						},
-						{
-							"Type": "NodeCodeSpan",
-							"Data": "code",
-							"Children": [
-								{
-									"Type": "NodeCodeSpanOpenMarker"
-								},
-								{
-									"Type": "NodeCodeSpanContent",
-									"Data": ".conf"
-								},
-								{
-									"Type": "NodeCodeSpanCloseMarker"
-								}
-							]
-						},
-						{
-							"Type": "NodeStrongA6kCloseMarker",
-							"Data": "**"
-						}
-					]
-				},
-				{
-					"Type": "NodeText",
-					"Data": " 后缀的文件，文件名任意，新建与写入需要管理员权限。\n在文件中写入我们 库的路径 ==\n​"
+					"Data": "\n​"
 				},
 				{
 					"Type": "NodeImage",
@@ -13097,12 +13117,32 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20220904134255-qls5d2k",
-				"updated": "20220904141229"
+				"updated": "20221020162914"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "最后使用 idconfig 指令编译。\n​"
+					"Data": "最后使用 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "ldconfig"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 指令编译。\n​"
 				},
 				{
 					"Type": "NodeImage",
@@ -13138,6 +13178,13 @@
 					"Data": "br"
 				}
 			]
+		},
+		{
+			"ID": "20221020162909-zoz9a7z",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221020162909-zoz9a7z"
+			}
 		}
 	]
 }
