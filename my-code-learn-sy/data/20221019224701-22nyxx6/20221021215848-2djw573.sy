@@ -4,7 +4,7 @@
 	"Properties": {
 		"id": "20221021215848-2djw573",
 		"title": "网络编程套接字",
-		"updated": "20221021224308"
+		"updated": "20221023204025"
 	},
 	"Children": [
 		{
@@ -5157,8 +5157,40 @@
 			"ID": "20221021222726-74pr7pr",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20221021222726-74pr7pr"
-			}
+				"id": "20221021222726-74pr7pr",
+				"updated": "20221023204025"
+			},
+			"Children": [
+				{
+					"Type": "NodeImage",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeBang"
+						},
+						{
+							"Type": "NodeOpenBracket"
+						},
+						{
+							"Type": "NodeLinkText",
+							"Data": "image"
+						},
+						{
+							"Type": "NodeCloseBracket"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeLinkDest",
+							"Data": "assets/image-20221023204025-2ux1chv.png"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
 		}
 	]
 }
