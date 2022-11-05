@@ -4,7 +4,7 @@
 	"Properties": {
 		"id": "20221026225404-wlq8q6e",
 		"title": "网络基础2",
-		"updated": "20221026230109"
+		"updated": "20221026225909"
 	},
 	"Children": [
 		{
@@ -477,53 +477,91 @@
 			}
 		},
 		{
-			"ID": "20221026225417-uthum6n",
+			"ID": "20221105231613-nqialu2",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221105231613-nqialu2"
+			}
+		},
+		{
+			"ID": "20221105231614-twvz5zb",
 			"Type": "NodeHeading",
 			"HeadingLevel": 1,
 			"Properties": {
-				"id": "20221026225417-uthum6n",
-				"updated": "20221026225417"
+				"id": "20221105231614-twvz5zb",
+				"updated": "20221105231614"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "http协议"
+					"Data": "数据链路层"
 				}
 			]
 		},
 		{
-			"ID": "20221026225417-jl65z46",
-			"Type": "NodeCodeBlock",
-			"IsFencedCodeBlock": true,
+			"ID": "20221105231614-mlz5kvk",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
 			"Properties": {
-				"id": "20221026225417-jl65z46",
-				"updated": "20221026225417"
+				"id": "20221105231614-mlz5kvk",
+				"updated": "20221105231614"
 			},
 			"Children": [
 				{
-					"Type": "NodeCodeBlockFenceOpenMarker",
-					"Data": "```"
-				},
-				{
-					"Type": "NodeCodeBlockFenceInfoMarker",
-					"CodeBlockInfo": "Y3Bw"
-				},
-				{
-					"Type": "NodeCodeBlockCode",
-					"Data": "#include \"Sock.hpp\"\n#include \u003cpthread.h\u003e\n\nvoid Usage(std::string proc)\n{\n    std::cout \u003c\u003c \"Usage: \" \u003c\u003c proc \u003c\u003c \" port\" \u003c\u003c std::endl;\n}\n\nvoid* HandlerHttpRequest(void* args)\n{\n    int sock = *(int*)args;\n    delete (int*)args;\n    pthread_detach(pthread_self());\n\n#define SIZE 1024*10\n\n    char buffer[SIZE];\n    memset(buffer , 0 ,sizeof(buffer));\n\n    ssize_t s = recv(sock , buffer , sizeof(buffer) , 0 );\n    if(s \u003e 0)\n    {\n        buffer[s] = 0;\n        std::cout \u003c\u003c buffer;//查看http的请求格式! for test\n\n        std::string http_response = \"http/1.0 200 OK\\n\";\n        http_response += \"Content-Type: text/plain\\n\";//text/plain,正文是普通的文本\n        http_response += \"\\n\"; //传说中的空行\n        http_response += \"hello bit , hello fmy\";\n\n        send(sock , http_response.c_str() , http_response.size() , 0);\n    }\n\n    close(sock);\n    return nullptr;\n\n}\n\nint main(int argc , char* argv[])\n{\n    if( argc != 2 )\n    {\n        Usage(argv[0]);\n        exit(1);\n    }\n\n    uint16_t port = atoi(argv[1]);\n    int listen_sock = Sock::Socket();\n    Sock::Bind(listen_sock , port);\n    Sock::Listen(listen_sock);\n\n    while(true)\n    {\n        int sock = Sock::Accept(listen_sock);\n        if(sock \u003e 0)\n        {\n            pthread_t tid;\n            int* pram = new int(sock);\n            pthread_create(\u0026tid , nullptr , HandlerHttpRequest , pram);\n        }\n    }\n}\n"
-				},
-				{
-					"Type": "NodeCodeBlockFenceCloseMarker",
-					"Data": "```"
+					"Type": "NodeText",
+					"Data": "以太网认识"
 				}
 			]
 		},
 		{
-			"ID": "20221026225417-sktzruh",
+			"ID": "20221105231614-v6untvz",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221105231614-v6untvz",
+				"updated": "20221105231614"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221105231614-kd5pct3",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221105231614-kd5pct3",
+						"updated": "20221105231614"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "\"以太网\" 不是一种具体的网络, 而是一种技术标准; 既包含了数据链路层的内容, 也包含了一些物理层的内容. 例如: 规定了网络拓扑结构, 访问控制方式, 传输速率等;\n例如以太网中的网线必须使用双绞线; 传输速率有10M, 100M, 1000M等;\n以太网是当前应用最广泛的局域网技术; 和以太网并列的还有令牌环网, 无线LAN等;"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221105231614-uiirn8m",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221105231614-uiirn8m",
+				"updated": "20221105231614"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "以太网帧格式"
+				}
+			]
+		},
+		{
+			"ID": "20221105231614-2wsslts",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20221026225417-sktzruh",
-				"updated": "20221026230109"
+				"id": "20221105231614-2wsslts",
+				"updated": "20221105232511"
 			},
 			"Children": [
 				{
@@ -538,7 +576,7 @@
 						},
 						{
 							"Type": "NodeLinkText",
-							"Data": "Pasted image 20221026225322"
+							"Data": "Pasted image 20221105132647"
 						},
 						{
 							"Type": "NodeCloseBracket"
@@ -548,10 +586,689 @@
 						},
 						{
 							"Type": "NodeLinkDest",
-							"Data": "assets/Pasted image 20221026225322-20221026230109-0aso58n.png"
+							"Data": "assets/Pasted image 20221105132647-20221105232511-kzj859c.png"
 						},
 						{
 							"Type": "NodeCloseParen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221105231614-kdphcje",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221105231614-kdphcje",
+				"updated": "20221105231614"
+			},
+			"Children": [
+				{
+					"ID": "20221105231614-s18wck3",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221105231614-s18wck3",
+						"updated": "20221105231614"
+					},
+					"Children": [
+						{
+							"ID": "20221105231614-8d8aamm",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221105231614-8d8aamm",
+								"updated": "20221105231614"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "源地址和目的地址是指网卡的硬件地址(也叫"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeStrong",
+											"Data": "strong",
+											"Children": [
+												{
+													"Type": "NodeStrongA6kOpenMarker",
+													"Data": "**"
+												},
+												{
+													"Type": "NodeText",
+													"Data": "MAC地址"
+												},
+												{
+													"Type": "NodeStrongA6kCloseMarker",
+													"Data": "**"
+												}
+											]
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "), 长度是48位,是在网卡出厂时固化的;"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221105231614-iwwpwle",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221105231614-iwwpwle",
+						"updated": "20221105231614"
+					},
+					"Children": [
+						{
+							"ID": "20221105231614-59s504c",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221105231614-59s504c",
+								"updated": "20221105231614"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "帧协议类型字段有三种值,分别对应IP、ARP、RARP;"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221105231614-2irtnu0",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221105231614-2irtnu0",
+						"updated": "20221105231614"
+					},
+					"Children": [
+						{
+							"ID": "20221105231614-e02hou2",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221105231614-e02hou2",
+								"updated": "20221105231614"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "帧末尾是CRC校验码。"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221105231614-szfwuqx",
+			"Type": "NodeTable",
+			"TableAligns": [
+				2,
+				2,
+				1
+			],
+			"Properties": {
+				"colgroup": "||",
+				"id": "20221105231614-szfwuqx",
+				"updated": "20221105231614"
+			},
+			"Children": [
+				{
+					"Type": "NodeTableHead",
+					"Data": "thead",
+					"Children": [
+						{
+							"Type": "NodeTableRow",
+							"Data": "tr",
+							"Children": [
+								{
+									"Type": "NodeTableCell",
+									"Data": "th",
+									"TableCellAlign": 2,
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "字段名称"
+										}
+									]
+								},
+								{
+									"Type": "NodeTableCell",
+									"Data": "th",
+									"TableCellAlign": 2,
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "长度(byte)"
+										}
+									]
+								},
+								{
+									"Type": "NodeTableCell",
+									"Data": "th",
+									"TableCellAlign": 1,
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "含义"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"Data": "tr",
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"TableCellAlign": 2,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "目的地址"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"TableCellAlign": 2,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "6"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "接收方MAC地址，网络包接收方的MAC地址，在局域网中使用这一地址来传输网络包"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"Data": "tr",
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"TableCellAlign": 2,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "源地址"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"TableCellAlign": 2,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "6"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "网络包发送方的MAC地址，接收方通过它来判断是谁发送了这个包"
+								}
+							]
+						}
+					]
+				},
+				{
+					"Type": "NodeTableRow",
+					"Data": "tr",
+					"Children": [
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"TableCellAlign": 2,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "类型"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"TableCellAlign": 2,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "2"
+								}
+							]
+						},
+						{
+							"Type": "NodeTableCell",
+							"Data": "td",
+							"TableCellAlign": 1,
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "使用的协议类型。TCP通信中 IP协议与ARP协议较常见 0000-05DC：IEEE 802.3  "
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "0800:IP协议"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "  ；"
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "0806 :ARP协议"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": " ； "
+								},
+								{
+									"Type": "NodeMark",
+									"Data": "mark",
+									"Children": [
+										{
+											"Type": "NodeMark2OpenMarker"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "86DD:IPv6"
+										},
+										{
+											"Type": "NodeMark2CloseMarker"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221105231614-h4epjuo",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221105231614-h4epjuo",
+				"updated": "20221105231614"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221105231614-1lo6ftz",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221105231614-1lo6ftz",
+						"updated": "20221105231614"
+					},
+					"Children": [
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "如何分离报头和有效载荷(封装) ？  如何决定将自己的有效载荷交付给上一层？"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "\n都由"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "目的地址"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "，"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "源地址"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "，"
+						},
+						{
+							"Type": "NodeMark",
+							"Data": "mark",
+							"Children": [
+								{
+									"Type": "NodeMark2OpenMarker"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "类型"
+								},
+								{
+									"Type": "NodeMark2CloseMarker"
+								}
+							]
+						},
+						{
+							"Type": "NodeText",
+							"Data": "决定。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221105231614-mbup46g",
+			"Type": "NodeHeading",
+			"HeadingLevel": 2,
+			"Properties": {
+				"id": "20221105231614-mbup46g",
+				"updated": "20221105231614"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "认识MAC地址"
+				}
+			]
+		},
+		{
+			"ID": "20221105231614-6eocedd",
+			"Type": "NodeList",
+			"ListData": {},
+			"Properties": {
+				"id": "20221105231614-6eocedd",
+				"updated": "20221105231614"
+			},
+			"Children": [
+				{
+					"ID": "20221105231614-vtg0opu",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221105231614-vtg0opu",
+						"updated": "20221105231614"
+					},
+					"Children": [
+						{
+							"ID": "20221105231614-2pe4w29",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221105231614-2pe4w29",
+								"updated": "20221105231614"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "MAC地址用来识别数据链路层中相连的节点;"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221105231614-a9pozjz",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221105231614-a9pozjz",
+						"updated": "20221105231614"
+					},
+					"Children": [
+						{
+							"ID": "20221105231614-6h5pjpu",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221105231614-6h5pjpu",
+								"updated": "20221105231614"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "长度为"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "48位"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": ", 及"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "6个字节"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": ". 一般用16进制数字加上"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "冒号"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "的形式来表示(例如: 08:00:27:03:fb:19)"
+								}
+							]
+						}
+					]
+				},
+				{
+					"ID": "20221105231614-3eeb9x2",
+					"Type": "NodeListItem",
+					"ListData": {
+						"BulletChar": 42,
+						"Marker": "Kg=="
+					},
+					"Properties": {
+						"id": "20221105231614-3eeb9x2",
+						"updated": "20221105231614"
+					},
+					"Children": [
+						{
+							"ID": "20221105231614-nalrk4f",
+							"Type": "NodeParagraph",
+							"Properties": {
+								"id": "20221105231614-nalrk4f",
+								"updated": "20221105231614"
+							},
+							"Children": [
+								{
+									"Type": "NodeText",
+									"Data": "在"
+								},
+								{
+									"Type": "NodeStrong",
+									"Data": "strong",
+									"Children": [
+										{
+											"Type": "NodeStrongA6kOpenMarker",
+											"Data": "**"
+										},
+										{
+											"Type": "NodeText",
+											"Data": "网卡出厂时就确定了, 不能修改. mac地址通常是唯一的"
+										},
+										{
+											"Type": "NodeStrongA6kCloseMarker",
+											"Data": "**"
+										}
+									]
+								},
+								{
+									"Type": "NodeText",
+									"Data": "(虚拟机中的mac地址不是真实的mac地址, 可能会冲突; 也有些网卡支持用户配置mac地址)."
+								}
+							]
 						}
 					]
 				}

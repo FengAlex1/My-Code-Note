@@ -4,7 +4,7 @@
 	"Properties": {
 		"id": "20221029230630-wff4glm",
 		"title": "TCP协议",
-		"updated": "20221102225044"
+		"updated": "20221105212158"
 	},
 	"Children": [
 		{
@@ -9122,12 +9122,12 @@
 			]
 		},
 		{
-			"ID": "20221102222415-y0dy1d3",
+			"ID": "20221105212014-zi7bhlt",
 			"Type": "NodeHeading",
 			"HeadingLevel": 2,
 			"Properties": {
-				"id": "20221102222415-y0dy1d3",
-				"updated": "20221102222415"
+				"id": "20221105212014-zi7bhlt",
+				"updated": "20221105212014"
 			},
 			"Children": [
 				{
@@ -9137,11 +9137,11 @@
 			]
 		},
 		{
-			"ID": "20221102222415-52in1qw",
+			"ID": "20221105212014-dk217g1",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20221102222415-52in1qw",
-				"updated": "20221102222415"
+				"id": "20221105212014-dk217g1",
+				"updated": "20221105212014"
 			},
 			"Children": [
 				{
@@ -9171,46 +9171,66 @@
 			]
 		},
 		{
-			"ID": "20221102222415-9qly10m",
+			"ID": "20221105212014-g9bixq1",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20221102222415-9qly10m",
-				"updated": "20221102222415"
+				"id": "20221105212014-g9bixq1",
+				"updated": "20221105212014"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "需要 TIME-WAIT 状态，主要是两个原因："
+					"Data": "需要 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "TIME-WAIT"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 状态，主要是两个原因："
 				}
 			]
 		},
 		{
-			"ID": "20221102222415-od1lzp9",
+			"ID": "20221105212014-4lvg6i6",
 			"Type": "NodeList",
 			"ListData": {},
 			"Properties": {
-				"id": "20221102222415-od1lzp9",
-				"updated": "20221102222415"
+				"id": "20221105212014-4lvg6i6",
+				"updated": "20221105212014"
 			},
 			"Children": [
 				{
-					"ID": "20221102222415-b37hshv",
+					"ID": "20221105212014-ziupy4y",
 					"Type": "NodeListItem",
 					"ListData": {
 						"BulletChar": 42,
 						"Marker": "Kg=="
 					},
 					"Properties": {
-						"id": "20221102222415-b37hshv",
-						"updated": "20221102222415"
+						"id": "20221105212014-ziupy4y",
+						"updated": "20221105212014"
 					},
 					"Children": [
 						{
-							"ID": "20221102222415-33nwsgy",
+							"ID": "20221105212014-24s2c0q",
 							"Type": "NodeParagraph",
 							"Properties": {
-								"id": "20221102222415-33nwsgy",
-								"updated": "20221102222415"
+								"id": "20221105212014-24s2c0q",
+								"updated": "20221105212014"
 							},
 							"Children": [
 								{
@@ -9222,23 +9242,23 @@
 					]
 				},
 				{
-					"ID": "20221102222415-52x892a",
+					"ID": "20221105212014-flx7cxg",
 					"Type": "NodeListItem",
 					"ListData": {
 						"BulletChar": 42,
 						"Marker": "Kg=="
 					},
 					"Properties": {
-						"id": "20221102222415-52x892a",
-						"updated": "20221102222415"
+						"id": "20221105212014-flx7cxg",
+						"updated": "20221105212014"
 					},
 					"Children": [
 						{
-							"ID": "20221102222415-lek344r",
+							"ID": "20221105212014-6h157f7",
 							"Type": "NodeParagraph",
 							"Properties": {
-								"id": "20221102222415-lek344r",
-								"updated": "20221102222415"
+								"id": "20221105212014-6h157f7",
+								"updated": "20221105212014"
 							},
 							"Children": [
 								{
@@ -9252,12 +9272,12 @@
 			]
 		},
 		{
-			"ID": "20221102222415-f1x9ida",
+			"ID": "20221105212014-8yl2c0t",
 			"Type": "NodeHeading",
 			"HeadingLevel": 3,
 			"Properties": {
-				"id": "20221102222415-f1x9ida",
-				"updated": "20221102222415"
+				"id": "20221105212014-8yl2c0t",
+				"updated": "20221105212014"
 			},
 			"Children": [
 				{
@@ -9267,46 +9287,90 @@
 			]
 		},
 		{
-			"ID": "20221102222415-p8amnqd",
+			"ID": "20221105212014-z160cxu",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20221102222415-p8amnqd",
-				"updated": "20221102222415"
+				"id": "20221105212014-z160cxu",
+				"updated": "20221105212014"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "为了能更好的理解这个原因，我们先来了解序列号（SEQ）和初始序列号（ISN）。"
+					"Data": "为了能更好的理解这个原因，我们先来了解"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "序列号（SEQ）"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 和"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "初始序列号（ISN）"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
 				}
 			]
 		},
 		{
-			"ID": "20221102222415-d6mnj82",
+			"ID": "20221105212014-be2jqvh",
 			"Type": "NodeList",
 			"ListData": {},
 			"Properties": {
-				"id": "20221102222415-d6mnj82",
-				"updated": "20221102222415"
+				"id": "20221105212014-be2jqvh",
+				"updated": "20221105212014"
 			},
 			"Children": [
 				{
-					"ID": "20221102222415-p3ayqzf",
+					"ID": "20221105212014-nurbqq7",
 					"Type": "NodeListItem",
 					"ListData": {
 						"BulletChar": 42,
 						"Marker": "Kg=="
 					},
 					"Properties": {
-						"id": "20221102222415-p3ayqzf",
-						"updated": "20221102222415"
+						"id": "20221105212014-nurbqq7",
+						"updated": "20221105212014"
 					},
 					"Children": [
 						{
-							"ID": "20221102222415-batg6qr",
+							"ID": "20221105212014-p27wg26",
 							"Type": "NodeParagraph",
 							"Properties": {
-								"id": "20221102222415-batg6qr",
-								"updated": "20221102222415"
+								"id": "20221105212014-p27wg26",
+								"updated": "20221105212014"
 							},
 							"Children": [
 								{
@@ -9358,23 +9422,23 @@
 					]
 				},
 				{
-					"ID": "20221102222415-ky1omkr",
+					"ID": "20221105212014-6jakal3",
 					"Type": "NodeListItem",
 					"ListData": {
 						"BulletChar": 42,
 						"Marker": "Kg=="
 					},
 					"Properties": {
-						"id": "20221102222415-ky1omkr",
-						"updated": "20221102222415"
+						"id": "20221105212014-6jakal3",
+						"updated": "20221105212014"
 					},
 					"Children": [
 						{
-							"ID": "20221102222415-d2roj56",
+							"ID": "20221105212014-938of7x",
 							"Type": "NodeParagraph",
 							"Properties": {
-								"id": "20221102222415-d2roj56",
-								"updated": "20221102222415"
+								"id": "20221105212014-938of7x",
+								"updated": "20221105212014"
 							},
 							"Children": [
 								{
@@ -9428,16 +9492,36 @@
 			]
 		},
 		{
-			"ID": "20221102222415-tw8au24",
+			"ID": "20221105212014-dwcsqlb",
 			"Type": "NodeParagraph",
 			"Properties": {
-				"id": "20221102222415-tw8au24",
-				"updated": "20221102222918"
+				"id": "20221105212014-dwcsqlb",
+				"updated": "20221105212014"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "给大家抓了一个包，下图中的 Seq 就是序列号，其中红色框住的分别是客户端和服务端各自生成的初始序列号。\n​"
+					"Data": "给大家抓了一个包，下图中的 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "Seq"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 就是序列号，其中红色框住的分别是客户端和服务端各自生成的初始序列号。\n​"
 				},
 				{
 					"Type": "NodeImage",
@@ -9523,12 +9607,32 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20221102222415-yzmo5r7",
-				"updated": "20221102222926"
+				"updated": "20221105212028"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "假设 TIME-WAIT 没有等待时间或时间过短，被延迟的数据包抵达后会发生什么呢？\n​"
+					"Data": "假设 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "TIME-WAIT"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 没有等待时间或时间过短，被延迟的数据包抵达后会发生什么呢？\n​"
 				},
 				{
 					"Type": "NodeImage",
@@ -9685,12 +9789,32 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20221102222415-y53emw9",
-				"updated": "20221102222415"
+				"updated": "20221105212039"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "为了防止历史连接中的数据，被后面相同四元组的连接错误的接收，因此 TCP 设计了 TIME_WAIT 状态，状态会持续 "
+					"Data": "为了防止历史连接中的数据，被后面相同四元组的连接错误的接收，因此 TCP 设计了 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "TIME_WAIT"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 状态，状态会持续 "
 				},
 				{
 					"Type": "NodeCodeSpan",
@@ -9759,12 +9883,28 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20221102222415-qs48p9y",
-				"updated": "20221102222415"
+				"updated": "20221105212045"
 			},
 			"Children": [
 				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "TIME-WAIT"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
 					"Type": "NodeText",
-					"Data": "TIME-WAIT 作用是"
+					"Data": " 作用是"
 				},
 				{
 					"Type": "NodeStrong",
@@ -9791,12 +9931,52 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20221102222415-v3t4x9a",
-				"updated": "20221102222415"
+				"updated": "20221105212049"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "如果客户端（主动关闭方）最后一次 ACK 报文（第四次挥手）在网络中丢失了，那么按照 TCP 可靠性原则，服务端（被动关闭方）会重发 FIN 报文。"
+					"Data": "如果客户端（主动关闭方）最后一次 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "ACK"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 报文（第四次挥手）在网络中丢失了，那么按照 TCP 可靠性原则，服务端（被动关闭方）会重发 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "FIN"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 报文。"
 				}
 			]
 		},
@@ -9805,12 +9985,196 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20221102222415-1dj5jm6",
-				"updated": "20221102222415"
+				"updated": "20221105212109"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "假设客户端没有 TIME_WAIT 状态，而是在发完最后一次回 ACK 报文就直接进入 CLOSE 状态，如果该 ACK 报文丢失了，服务端则重传的 FIN 报文，而这时客户端已经进入到关闭状态了，在收到服务端重传的 FIN 报文后，就会回 RST 报文。"
+					"Data": "假设"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "客户端"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "没有 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "TIME_WAIT"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 状态，而是在发完最后一次回 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "ACK"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 报文就直接进入 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "CLOSE"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 状态，如果该 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "ACK"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 报文丢失了，"
+				},
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "服务端"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "则重传的 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "FIN"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 报文，而这时客户端已经进入到关闭状态了，在收到服务端重传的 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "FIN"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 报文后，就会回 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "RST"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 报文。"
 				}
 			]
 		},
@@ -9858,12 +10222,32 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20221102222415-6b7timg",
-				"updated": "20221102222415"
+				"updated": "20221105212116"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "服务端收到这个 RST 并将其解释为一个错误（Connection reset by peer），这对于一个可靠的协议来说不是一个优雅的终止方式。"
+					"Data": "服务端收到这个 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "RST"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 并将其解释为一个错误（Connection reset by peer），这对于一个可靠的协议来说不是一个优雅的终止方式。"
 				}
 			]
 		},
@@ -9872,12 +10256,105 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20221102222415-v49gaq6",
-				"updated": "20221102223003"
+				"updated": "20221105212131"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "为了防止这种情况出现，客户端必须等待足够长的时间，确保服务端能够收到 ACK，如果服务端没有收到 ACK，那么就会触发 TCP 重传机制，服务端会重新发送一个 FIN，这样一去一来刚好两个 MSL 的时间。\n​"
+					"Data": "为了防止这种情况出现，客户端必须等待足够长的时间，确保服务端能够收到 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "ACK"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，如果服务端没有收到 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "ACK"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，那么就会触发 TCP 重传机制，服务端会重新发送一个 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "FIN"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "，这样一去一来刚好两个 "
+				},
+				{
+					"Type": "NodeBlockRef",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeBlockRefID",
+							"Data": "20221102222415-r4idn72"
+						},
+						{
+							"Type": "NodeBlockRefSpace"
+						},
+						{
+							"Type": "NodeBlockRefDynamicText",
+							"Data": "MSL"
+						},
+						{
+							"Type": "NodeCloseParen"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 的时间。\n​"
 				},
 				{
 					"Type": "NodeImage",
@@ -9919,12 +10396,85 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20221102222415-fh7y3lb",
-				"updated": "20221102222415"
+				"updated": "20221105212145"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "客户端在收到服务端重传的 FIN 报文时，TIME_WAIT 状态的等待时间，会重置回 2MSL。"
+					"Data": "客户端在收到服务端重传的 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "FIN"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 报文时，"
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "TIME_WAIT"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 状态的等待时间，会重置回 2"
+				},
+				{
+					"Type": "NodeBlockRef",
+					"Data": "span",
+					"Children": [
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeOpenParen"
+						},
+						{
+							"Type": "NodeBlockRefID",
+							"Data": "20221102222415-r4idn72"
+						},
+						{
+							"Type": "NodeBlockRefSpace"
+						},
+						{
+							"Type": "NodeBlockRefDynamicText",
+							"Data": "MSL"
+						},
+						{
+							"Type": "NodeCloseParen"
+						},
+						{
+							"Type": "NodeCloseParen"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "。"
 				}
 			]
 		},
@@ -9948,12 +10498,32 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20221102222415-3iobrn6",
-				"updated": "20221102222415"
+				"updated": "20221105212153"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "过多的 TIME-WAIT 状态主要的危害有两种："
+					"Data": "过多的 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "TIME-WAIT"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 状态主要的危害有两种："
 				}
 			]
 		},
@@ -10069,12 +10639,32 @@
 			"Type": "NodeParagraph",
 			"Properties": {
 				"id": "20221102222415-q98pwm4",
-				"updated": "20221102222415"
+				"updated": "20221105212158"
 			},
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "客户端和服务端 TIME_WAIT 过多，造成的影响是不同的。"
+					"Data": "客户端和服务端 "
+				},
+				{
+					"Type": "NodeCodeSpan",
+					"Data": "code",
+					"Children": [
+						{
+							"Type": "NodeCodeSpanOpenMarker"
+						},
+						{
+							"Type": "NodeCodeSpanContent",
+							"Data": "TIME_WAIT"
+						},
+						{
+							"Type": "NodeCodeSpanCloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": " 过多，造成的影响是不同的。"
 				}
 			]
 		},
@@ -22681,6 +23271,153 @@
 					"Data": "，而不用重传所有的分片，大大增加了重传的效率。"
 				}
 			]
+		},
+		{
+			"ID": "20221105211627-09a02s0",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221105211627-09a02s0"
+			}
+		},
+		{
+			"ID": "20221105211629-5vuhgtk",
+			"Type": "NodeHeading",
+			"HeadingLevel": 1,
+			"Properties": {
+				"id": "20221105211629-5vuhgtk",
+				"updated": "20221105211629"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "TCP异常情况"
+				}
+			]
+		},
+		{
+			"ID": "20221105211629-6uv03m1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221105211629-6uv03m1",
+				"updated": "20221105211629"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "进程终止"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ": 进程终止会释放文件描述符, 仍然可以发送FIN. 和正常关闭没有什么区别."
+				}
+			]
+		},
+		{
+			"ID": "20221105211629-8ogo2mn",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221105211629-8ogo2mn",
+				"updated": "20221105211629"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "机器重启"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ": 和进程终止的情况相同."
+				}
+			]
+		},
+		{
+			"ID": "20221105211629-y8fa2aj",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221105211629-y8fa2aj",
+				"updated": "20221105211629"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "机器掉电/网线断开"
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": ": 接收端认为连接还在, 一旦接收端有写入操作, 接收端发现连接已经不在了, 就会进行reset. 即使没有写入操作, TCP自己也内置了一个保活定时器, 会定期询问对方是否还在. 如果对方不在, 也会把连接释放."
+				}
+			]
+		},
+		{
+			"ID": "20221105211629-bcy2sej",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221105211629-bcy2sej",
+				"updated": "20221105211629"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "另外, 应用层的某些协议, 也有一些这样的检测机制. 例如HTTP长连接中, 也会定期检测对方的状态. 例如QQ, 在QQ\n断线之后, 也会定期尝试重新连接."
+				}
+			]
+		},
+		{
+			"ID": "20221105211628-rm5wxt9",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221105211628-rm5wxt9"
+			}
+		},
+		{
+			"ID": "20221105211635-zc2dbv7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221105211635-zc2dbv7"
+			}
+		},
+		{
+			"ID": "20221105211636-taixaqs",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221105211636-taixaqs"
+			}
 		},
 		{
 			"ID": "20221102222415-zl02an7",
