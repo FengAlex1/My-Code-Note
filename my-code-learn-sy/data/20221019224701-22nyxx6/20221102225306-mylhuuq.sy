@@ -4,7 +4,7 @@
 	"Properties": {
 		"id": "20221102225306-mylhuuq",
 		"title": "IP协议",
-		"updated": "20221105232925"
+		"updated": "20221106181948"
 	},
 	"Children": [
 		{
@@ -9503,6 +9503,416 @@
 			]
 		},
 		{
+			"ID": "20221106181905-u7e1anx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221106181905-u7e1anx"
+			}
+		},
+		{
+			"ID": "20221106181914-duoe8tk",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221106181914-duoe8tk",
+				"updated": "20221106181914"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "三种方式下IP转化过程"
+				}
+			]
+		},
+		{
+			"ID": "20221106181914-6lp75b7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221106181914-6lp75b7",
+				"updated": "20221106181914"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "NAT服务器有两个网卡，一个连接内部网络，一个连接外部网络，只有在内部网络访问外部网络时，会进行地址转换。在NAT服务器内部有一张NAT转换表，里面存储着个IP地址之间的对应信息。"
+				}
+			]
+		},
+		{
+			"ID": "20221106181914-16sn5ck",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20221106181914-16sn5ck",
+				"updated": "20221106181914"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "（1）静态转换"
+				}
+			]
+		},
+		{
+			"ID": "20221106181914-ldthjz9",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221106181914-ldthjz9",
+				"updated": "20221106181914"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221106181914-d7wms7g",
+					"Type": "NodeList",
+					"ListData": {
+						"Typ": 1
+					},
+					"Properties": {
+						"id": "20221106181914-d7wms7g",
+						"updated": "20221106181914"
+					},
+					"Children": [
+						{
+							"ID": "20221106181914-dft6zxf",
+							"Type": "NodeListItem",
+							"ListData": {
+								"Typ": 1,
+								"Delimiter": 46,
+								"Marker": "MS4=",
+								"Num": 1
+							},
+							"Properties": {
+								"id": "20221106181914-dft6zxf",
+								"updated": "20221106181914"
+							},
+							"Children": [
+								{
+									"ID": "20221106181914-9ru76d2",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221106181914-9ru76d2",
+										"updated": "20221106181914"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "首先，当内网终端要访问外网服务器时，会先将请求发送给NAT服务器；"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20221106181914-1ubmwk6",
+							"Type": "NodeListItem",
+							"ListData": {
+								"Typ": 1,
+								"Delimiter": 46,
+								"Marker": "Mi4=",
+								"Num": 2
+							},
+							"Properties": {
+								"id": "20221106181914-1ubmwk6",
+								"updated": "20221106181914"
+							},
+							"Children": [
+								{
+									"ID": "20221106181914-4obtw8s",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221106181914-4obtw8s",
+										"updated": "20221106181914"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "NAT服务器接收到请求后，根据接收到的数据包检查NAT表；"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20221106181914-4v5zgvw",
+							"Type": "NodeListItem",
+							"ListData": {
+								"Typ": 1,
+								"Delimiter": 46,
+								"Marker": "My4=",
+								"Num": 3
+							},
+							"Properties": {
+								"id": "20221106181914-4v5zgvw",
+								"updated": "20221106181914"
+							},
+							"Children": [
+								{
+									"ID": "20221106181914-0tbbc7z",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221106181914-0tbbc7z",
+										"updated": "20221106181914"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "如果已为该地址配置了静态地址转换，NAT服务器就使用对应的公网IP地址转发数据包，否则，NAT服务器不对地址进行转换，直接将数据包丢弃；"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20221106181914-u8fjmfq",
+							"Type": "NodeListItem",
+							"ListData": {
+								"Typ": 1,
+								"Delimiter": 46,
+								"Marker": "NC4=",
+								"Num": 4
+							},
+							"Properties": {
+								"id": "20221106181914-u8fjmfq",
+								"updated": "20221106181914"
+							},
+							"Children": [
+								{
+									"ID": "20221106181914-ne9578t",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221106181914-ne9578t",
+										"updated": "20221106181914"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "Internet主机接收到请求之后，会将应答信息返回给端口NAT服务器；"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20221106181914-4bjop2b",
+							"Type": "NodeListItem",
+							"ListData": {
+								"Typ": 1,
+								"Delimiter": 46,
+								"Marker": "NS4=",
+								"Num": 5
+							},
+							"Properties": {
+								"id": "20221106181914-4bjop2b",
+								"updated": "20221106181914"
+							},
+							"Children": [
+								{
+									"ID": "20221106181914-6u99hua",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221106181914-6u99hua",
+										"updated": "20221106181914"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "当NAT服务器接收到来自Internet上的主机返回的数据包后，检查静态NAT表。如果NAT表中存在匹配的映射项，则将目标地址转换为相应的内网IP，并将数据包转发给内网主机。如果不存在匹配映射项，则将数据包丢弃；"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221106181914-qm9roq4",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20221106181914-qm9roq4",
+				"updated": "20221106181914"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "（2）动态转换"
+				}
+			]
+		},
+		{
+			"ID": "20221106181914-vehef0p",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221106181914-vehef0p",
+				"updated": "20221106181914"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221106181914-hmj4yyn",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221106181914-hmj4yyn",
+						"updated": "20221106181914"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "动态转换的过程和静态转换差不多，只是其转换成对应的合法公有IP地址是不确定的，也就是随机分配的；"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221106181914-3ddttn6",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20221106181914-3ddttn6",
+				"updated": "20221106181914"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "（3）端口多路复用"
+				}
+			]
+		},
+		{
+			"ID": "20221106181914-gisvb7h",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221106181914-gisvb7h",
+				"updated": "20221106181914"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221106181914-gme1k0q",
+					"Type": "NodeList",
+					"ListData": {
+						"Typ": 1
+					},
+					"Properties": {
+						"id": "20221106181914-gme1k0q",
+						"updated": "20221106181914"
+					},
+					"Children": [
+						{
+							"ID": "20221106181914-ertuo45",
+							"Type": "NodeListItem",
+							"ListData": {
+								"Typ": 1,
+								"Delimiter": 46,
+								"Marker": "MS4=",
+								"Num": 1
+							},
+							"Properties": {
+								"id": "20221106181914-ertuo45",
+								"updated": "20221106181914"
+							},
+							"Children": [
+								{
+									"ID": "20221106181914-kwpnvxe",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221106181914-kwpnvxe",
+										"updated": "20221106181914"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "当内网主机需要与Internet建立连接时，首先将请求发送到端口NAT服务器。NAT服务器接收到请求后，根据接收到的数据包，检查端口NAT映射表；如果还没有为该内网主机建立地址转换映射项，则NAT服务器会创建一个会话，并给该会话分配一个端口。之后将源地址及端口改为企业公网IP地址及相应的端口，发送数据包到Internet主机上；"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20221106181914-8f435g5",
+							"Type": "NodeListItem",
+							"ListData": {
+								"Typ": 1,
+								"Delimiter": 46,
+								"Marker": "Mi4=",
+								"Num": 2
+							},
+							"Properties": {
+								"id": "20221106181914-8f435g5",
+								"updated": "20221106181914"
+							},
+							"Children": [
+								{
+									"ID": "20221106181914-67humyq",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221106181914-67humyq",
+										"updated": "20221106181914"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "Internet主机接收到信息后，将应答信息返回给端口NAT服务器；"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20221106181914-dvnu3xi",
+							"Type": "NodeListItem",
+							"ListData": {
+								"Typ": 1,
+								"Delimiter": 46,
+								"Marker": "My4=",
+								"Num": 3
+							},
+							"Properties": {
+								"id": "20221106181914-dvnu3xi",
+								"updated": "20221106181914"
+							},
+							"Children": [
+								{
+									"ID": "20221106181914-u7vhiis",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221106181914-u7vhiis",
+										"updated": "20221106181914"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "当端口NAT服务器接收到应答信息后，检查端口NAT映射表。如果端口NAT表存在匹配的映射项，则将目标地址及端口转换为对应的内网IP及端口，将数据包转发给内网主机。如果不存在匹配映射项，就将数据包丢弃；"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221106181905-nep14e1",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221106181905-nep14e1"
+			}
+		},
+		{
 			"ID": "20221105231054-xd7gp5m",
 			"Type": "NodeHeading",
 			"HeadingLevel": 3,
@@ -9781,6 +10191,688 @@
 					"Data": "说人话，就是客户端主动从 NAT 设备获取公有 IP 地址，然后自己建立端口映射条目，然后用这个条目对外通信，就不需要 NAT 设备来进行转换了。"
 				}
 			]
+		},
+		{
+			"ID": "20221106181935-cs7np3u",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221106181935-cs7np3u"
+			}
+		},
+		{
+			"ID": "20221106181948-rfqny7f",
+			"Type": "NodeHeading",
+			"HeadingLevel": 3,
+			"Properties": {
+				"id": "20221106181948-rfqny7f",
+				"updated": "20221106181948"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "NAT和代理服务器"
+				}
+			]
+		},
+		{
+			"ID": "20221106181952-h6vdceh",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221106181952-h6vdceh"
+			}
+		},
+		{
+			"ID": "20221106181948-ktve8tu",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20221106181948-ktve8tu",
+				"updated": "20221106181948"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "代理服务器"
+				}
+			]
+		},
+		{
+			"ID": "20221106181948-cyvlcnd",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221106181948-cyvlcnd",
+				"updated": "20221106181948"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221106181948-3xbp51y",
+					"Type": "NodeParagraph",
+					"Properties": {
+						"id": "20221106181948-3xbp51y",
+						"updated": "20221106181948"
+					},
+					"Children": [
+						{
+							"Type": "NodeText",
+							"Data": "代理服务器是一种特殊的网络服务，允许一个网络终端（一般为客户端）与另一个网络终端（一般为服务器）进行非直接的连接。一些网关，路由器具备网络代理功能。"
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221106181948-w4cauau",
+			"Type": "NodeHeading",
+			"HeadingLevel": 5,
+			"Properties": {
+				"id": "20221106181948-w4cauau",
+				"updated": "20221106181948"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "代理服务器工作原理"
+				}
+			]
+		},
+		{
+			"ID": "20221106181948-d9xroxk",
+			"Type": "NodeBlockquote",
+			"Properties": {
+				"id": "20221106181948-d9xroxk",
+				"updated": "20221106181948"
+			},
+			"Children": [
+				{
+					"Type": "NodeBlockquoteMarker",
+					"Data": "\u003e"
+				},
+				{
+					"ID": "20221106181948-dzui3wt",
+					"Type": "NodeList",
+					"ListData": {
+						"Typ": 1
+					},
+					"Properties": {
+						"id": "20221106181948-dzui3wt",
+						"updated": "20221106181948"
+					},
+					"Children": [
+						{
+							"ID": "20221106181948-5iqsd5q",
+							"Type": "NodeListItem",
+							"ListData": {
+								"Typ": 1,
+								"Delimiter": 46,
+								"Marker": "MS4=",
+								"Num": 1
+							},
+							"Properties": {
+								"id": "20221106181948-5iqsd5q",
+								"updated": "20221106181948"
+							},
+							"Children": [
+								{
+									"ID": "20221106181948-qrie9g8",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221106181948-qrie9g8",
+										"updated": "20221106181948"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "客户端首先与代理服务器创建连接，接着根据代理服务器所使用的代理协议，请求对目标服务器创建连接、或者获得目标服务器的指定资源（如：文件）。"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20221106181948-yp8xyy9",
+							"Type": "NodeListItem",
+							"ListData": {
+								"Typ": 1,
+								"Delimiter": 46,
+								"Marker": "Mi4=",
+								"Num": 2
+							},
+							"Properties": {
+								"id": "20221106181948-yp8xyy9",
+								"updated": "20221106181948"
+							},
+							"Children": [
+								{
+									"ID": "20221106181948-n3nqgiq",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221106181948-n3nqgiq",
+										"updated": "20221106181948"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "在后一种情况中，代理服务器可能对目标服务器的资源下载至本地缓存，如果客户端所要获取的资源在代理服务器的缓存之中，则代理服务器并不会向目标服务器发送请求，而是直接返回缓存了的资源。"
+										}
+									]
+								}
+							]
+						},
+						{
+							"ID": "20221106181948-06q4s7w",
+							"Type": "NodeListItem",
+							"ListData": {
+								"Typ": 1,
+								"Delimiter": 46,
+								"Marker": "My4=",
+								"Num": 3
+							},
+							"Properties": {
+								"id": "20221106181948-06q4s7w",
+								"updated": "20221106181948"
+							},
+							"Children": [
+								{
+									"ID": "20221106181948-k6kyoli",
+									"Type": "NodeParagraph",
+									"Properties": {
+										"id": "20221106181948-k6kyoli",
+										"updated": "20221106181948"
+									},
+									"Children": [
+										{
+											"Type": "NodeText",
+											"Data": "一些代理协议允许代理服务器改变客户端的原始请求、目标服务器的原始响应，以满足代理协议的需要。"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"ID": "20221106181948-xpwxqlz",
+			"Type": "NodeHeading",
+			"HeadingLevel": 5,
+			"Properties": {
+				"id": "20221106181948-xpwxqlz",
+				"updated": "20221106181948"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "代理服务器的分类"
+				}
+			]
+		},
+		{
+			"ID": "20221106181948-c5t7jxa",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221106181948-c5t7jxa",
+				"updated": "20221106181948"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "HTTP代理："
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\nwww连接请求或在浏览网页上下载数据均采用HTTP代理，其通常绑定在代理服务器的80、3128和8080等端口上。"
+				}
+			]
+		},
+		{
+			"ID": "20221106181948-a1wtpog",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221106181948-a1wtpog",
+				"updated": "20221106181948"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "socks代理："
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n采用socks协议的代理服务器就是socks服务器。socks 不要求应用程序遵循特定的操作系统平台，socks 代理与应用层代理、HTTP层代理不同，socks 代理只是简单地传递数据包，而不必关心是何种应用协议（比如FTP、HTTP和NNTP请求）。所以，socks代理比其他应用层代理要快得多。它通常绑定在代理服务器的1080端口上。"
+				}
+			]
+		},
+		{
+			"ID": "20221106181948-b25lqjw",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221106181948-b25lqjw",
+				"updated": "20221106181948"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "VPN代理："
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n指在共用网络上建立专用网络的技术。称为虚拟网主要是因为整个VPN网络的任意两个结点之间的连接并没有传统专网建设所需的点到点的物理链路，而是架构在公用网络服务商ISP所提供的网络平台之上的逻辑网络。\n用户的数据是通过ISP在公共网络（Internet）中建立的逻辑隧道（Tunnel），即点到点的虚拟专线进行传输的。通过相应的加密和认证技术来保证用户内部网络数据在公网上安全传输，从而真正实现网络数据"
+				}
+			]
+		},
+		{
+			"ID": "20221106181948-j2ig99j",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221106181948-j2ig99j",
+				"updated": "20221106181948"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "FTP代理："
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n能够代理客户机上的FTP软件访问FTP服务器"
+				}
+			]
+		},
+		{
+			"ID": "20221106181948-7mtpslf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221106181948-7mtpslf",
+				"updated": "20221106181948"
+			},
+			"Children": [
+				{
+					"Type": "NodeMark",
+					"Data": "mark",
+					"Children": [
+						{
+							"Type": "NodeMark2OpenMarker"
+						},
+						{
+							"Type": "NodeStrong",
+							"Data": "strong",
+							"Children": [
+								{
+									"Type": "NodeStrongA6kOpenMarker",
+									"Data": "**"
+								},
+								{
+									"Type": "NodeText",
+									"Data": "POP3代理："
+								},
+								{
+									"Type": "NodeStrongA6kCloseMarker",
+									"Data": "**"
+								}
+							]
+						},
+						{
+							"Type": "NodeMark2CloseMarker"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\n代理客户机上的邮件软件用POP3方式收发邮件"
+				}
+			]
+		},
+		{
+			"ID": "20221106181948-6h9gl1n",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20221106181948-6h9gl1n",
+				"updated": "20221106181948"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "NAT技术和代理服务器的区别"
+				}
+			]
+		},
+		{
+			"ID": "20221106181948-t5m94w7",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221106181948-t5m94w7",
+				"updated": "20221106181948"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "（1） 在工作层面上讲"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：\nNAT技术工作在网络层，在此方式下，客户端只需设置自己的网关就可以使用。代理服务器工作在应用层，需要为每个协议指定代理服务器。"
+				}
+			]
+		},
+		{
+			"ID": "20221106181948-litv0mf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221106181948-litv0mf",
+				"updated": "20221106181948"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "（2）在应用层面上讲"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：\nNAT技术是网络基础设备之一，解决的是IP不足的问题；代理服务器则具体到了应用层上的协议，会增加一些额外的管理功能和缓冲功能；"
+				}
+			]
+		},
+		{
+			"ID": "20221106181948-azw5oud",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221106181948-azw5oud",
+				"updated": "20221106181948"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "（3）在使用范围上讲"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：\nNAT做局域网的出口部署，而代理服务器则可以应用于局域网，广域网，也可以跨网。"
+				}
+			]
+		},
+		{
+			"ID": "20221106181948-vxc63om",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221106181948-vxc63om",
+				"updated": "20221106181948"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "（4）在工作方式上讲"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "：\nNAT大多数情况下，仅修改数据包中的地址和端口，后记录对应关系后把数据转发出去，而代理服务器会先分析数据包的内容，弄清楚要做什么，后以自己的身份来“代理”完成这个请求，并将结果发送回客户端；"
+				}
+			]
+		},
+		{
+			"ID": "20221106181948-s99xb9n",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221106181948-s99xb9n",
+				"updated": "20221106181948"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "注：NAT == 货运码头，管你是啥货，只管发就是了；\n代理服务器 == 代理商，先要看你买啥,清楚了后再帮你买,可能直接从库房中提货,也可能去其它地方调货,也有可能不代理你要买的货；"
+				}
+			]
+		},
+		{
+			"ID": "20221106181948-6lo0atq",
+			"Type": "NodeHeading",
+			"HeadingLevel": 4,
+			"Properties": {
+				"id": "20221106181948-6lo0atq",
+				"updated": "20221106181948"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "各自的优缺点"
+				}
+			]
+		},
+		{
+			"ID": "20221106181948-fqamnzs",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221106181948-fqamnzs",
+				"updated": "20221106181948"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "服务器端"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\nNAT技术适用于中小访问量的情形，请求速度快，资源占用少。\n代理服务器耗费资源较多一些。"
+				}
+			]
+		},
+		{
+			"ID": "20221106181948-cang8cz",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221106181948-cang8cz",
+				"updated": "20221106181948"
+			},
+			"Children": [
+				{
+					"Type": "NodeStrong",
+					"Data": "strong",
+					"Children": [
+						{
+							"Type": "NodeStrongA6kOpenMarker",
+							"Data": "**"
+						},
+						{
+							"Type": "NodeText",
+							"Data": "客户端"
+						},
+						{
+							"Type": "NodeStrongA6kCloseMarker",
+							"Data": "**"
+						}
+					]
+				},
+				{
+					"Type": "NodeText",
+					"Data": "\nNAT设置简单，无需客户端软件。\n代理服务器会根据每一种应用设置代理服务器。需要安装客户端软件，比较复杂，且不一定支持所有的应用。如VPN客户端登录过多，代理服务器就无法代理应用。"
+				}
+			]
+		},
+		{
+			"ID": "20221106181936-297x0wf",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221106181936-297x0wf"
+			}
 		},
 		{
 			"ID": "20221105231054-ycetdki",
