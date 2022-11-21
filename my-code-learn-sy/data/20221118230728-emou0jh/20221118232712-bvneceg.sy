@@ -4,7 +4,7 @@
 	"Properties": {
 		"id": "20221118232712-bvneceg",
 		"title": "表的操作",
-		"updated": "20221118233409"
+		"updated": "20221119113603"
 	},
 	"Children": [
 		{
@@ -1146,6 +1146,13 @@
 			]
 		},
 		{
+			"ID": "20221119113458-68tsdyr",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221119113458-68tsdyr"
+			}
+		},
+		{
 			"ID": "20221118232714-jcnimk5",
 			"Type": "NodeParagraph",
 			"Properties": {
@@ -1197,6 +1204,13 @@
 					"Data": "```"
 				}
 			]
+		},
+		{
+			"ID": "20221119113501-w8hxbsx",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221119113501-w8hxbsx"
+			}
 		},
 		{
 			"ID": "20221118232714-xkixk27",
@@ -2265,6 +2279,13 @@
 			]
 		},
 		{
+			"ID": "20221119113526-ohrpqig",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221119113526-ohrpqig"
+			}
+		},
+		{
 			"ID": "20221118232714-bxx3t9o",
 			"Type": "NodeHeading",
 			"HeadingLevel": 5,
@@ -3145,7 +3166,20 @@
 			"Children": [
 				{
 					"Type": "NodeText",
-					"Data": "建议：对未知表进行查询时，最好加一条 LIMIT 1，避免因为表中数据过大，查询全表数据导致数据库卡死\n按 id 进行分页，每页 3 条记录，分别显示  第 1、2、3 页"
+					"Data": "建议：对未知表进行查询时，最好加一条 LIMIT 1，避免因为表中数据过大，查询全表数据导致数据库卡死\n"
+				}
+			]
+		},
+		{
+			"ID": "20221119113603-y2xo0uk",
+			"Type": "NodeParagraph",
+			"Properties": {
+				"id": "20221119113603-y2xo0uk"
+			},
+			"Children": [
+				{
+					"Type": "NodeText",
+					"Data": "按 id 进行分页，每页 3 条记录，分别显示  第 1、2、3 页"
 				}
 			]
 		},
